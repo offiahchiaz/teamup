@@ -1,5 +1,6 @@
 import { BrowserRouter, Switch, Route, Redirect } from 'react-router-dom';
 import { useAuthContext } from './hooks/useAuthContext';
+import OnlineUsers from './components/OnlineUsers';
 import Dashboard from './pages/dashboard/Dashboard';
 import Create from './pages/create/Create';
 import Login from './pages/login/Login';
@@ -9,6 +10,7 @@ import Navbar from './components/Navbar';
 import Sidebar from './components/Sidebar';
 
 import './App.css';
+
 
 
 function App() {
@@ -44,6 +46,7 @@ function App() {
               </Route>
             </Switch>
           </div>
+          {user && <OnlineUsers />}
         </BrowserRouter>
       )}
     </div>
