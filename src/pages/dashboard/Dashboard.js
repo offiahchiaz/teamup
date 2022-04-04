@@ -35,7 +35,7 @@ export default function Dashboard() {
         console.log(document.category, currentFilter)
         return document.category === currentFilter
       default:
-        break;
+        return true
     }
   }) : null
 
